@@ -1,0 +1,1 @@
+Mi proyecto es Garritas Petshop, un petshop donde una vez finalizado se podrán encontrar distintos productos y servicios para las mascotas. Actualmente, tiene navegables las secciones perros y gatos, donde se encontrará un catalogo de productos los cuales al ser clickeados ejecutan un render condicional que lleva al detalle del mismo. 

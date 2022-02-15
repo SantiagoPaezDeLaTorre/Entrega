@@ -1,0 +1,36 @@
+.itemDetail{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+.itemDetailLeft{
+    display: inherit;
+    
+}
+.itemDetailLeft img{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.itemDetailRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+
+}
+
+.contador {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    font-size: 2rem;
+}
+.contadorUp {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 3%;
+}
+.contadorBtn{
+    margin: 5%;
+    
+}

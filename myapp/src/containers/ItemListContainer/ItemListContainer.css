@@ -1,0 +1,12 @@
+
+.itemListContainer{
+  padding-top: 5%;
+}
+
+.catalogoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 0 0 auto;
+}
