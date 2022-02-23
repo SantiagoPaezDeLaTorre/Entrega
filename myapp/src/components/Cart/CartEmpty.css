@@ -1,0 +1,15 @@
+
+.emptyCart{
+    width: 75%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.emptyCartBtns {
+    display: flex;
+    flex-direction: row;
+}
+.emptyCartBtns button{
+    margin: 10px 15px;
+}

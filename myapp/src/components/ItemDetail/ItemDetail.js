@@ -1,11 +1,12 @@
 import React from "react";
 import ItemCounter from "../ItemCounter/ItemCounter";
 import "../ItemDetail/ItemDetail.css"
+import {Link} from 'react-router-dom';
 
 
-const ItemDetail = ({ itemDetails, onAddToCart, counterRender, setCounterRender }) => {
-console.log(counterRender);
-
+const ItemDetail = ({ item, onAddToCart, counterRender, setCounterRender  }) => {
+  let itemDetails = {};
+  itemDetails = item[0];
   return (
     <div className="itemDetail">
       <div className="itemDetailLeft">
@@ -14,7 +15,8 @@ console.log(counterRender);
       <div className="itemDetailRight">
         <h1>{itemDetails.nombre}</h1>
         <h2>$ {itemDetails.precio}</h2>
-        { counterRender ? <ItemCounter stock={itemDetails.stock} initial={1} onAddToCart={onAddToCart} counterRender={counterRender} setCounterRender={setCounterRender} />  : <p> </p> }
+        { counterRender ? <ItemCounter item={item} stock={item[0].stock} onAddToCart={onAddToCart} counterRender={counterRender} setCounterRender={setCounterRender} /> 
+          : <Link to="/cart" ><button > Finalizar compra </button></Link>}
       </div>
     </div>
   );

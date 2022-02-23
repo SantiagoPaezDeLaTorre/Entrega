@@ -1,0 +1,79 @@
+.cartContainer h1{
+    margin: 15px;
+}
+
+.cartCard{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.cartCardImg{
+    width: 10%;
+    justify-content: center;
+    justify-items: center;
+}
+.cartCardImg img{
+    display: block;
+    width: 80%;
+    margin: auto;
+    justify-self: center;
+}
+
+.cartCardData{
+    height: 40%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.cartCardData p{
+    display: inline-block;
+    font-size: 1.7vw;
+}
+.cartCardName{  
+    width: 65%;
+}
+.cartCardCantidad{
+    width: 15%;
+}
+.aaa{
+    padding-inline: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cartCardPrice{
+    height: 40%;
+}
+.cartCardPrice p{
+    display: inline-block;
+    font-size: 1.9vw;
+}
+.cartCardData b{
+    font-size: 1.8vw;
+    padding-inline: 30px;
+}
+.cartItemRemover{
+    height: 40%;
+    padding: 7px 30px;
+}
+.cartCardPrice{
+    height: 40%;
+}
+
+.emptyCartBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 65px;
+}
+
+.precioTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 65px;
+    margin-top: 15px;
+}

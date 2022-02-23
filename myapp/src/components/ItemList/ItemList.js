@@ -1,16 +1,18 @@
 import React from "react";
 import "./ItemList.css";
 import Item from "../Item/Item";
+import { Link } from 'react-router-dom';
 
-const ItemList = ({ categoryClicked, setShowDetail }) => {
+const ItemList = ({ items, micategoria}) => {
   return (
     <div className="catalogoContainer">
-      {categoryClicked.map((item) => {
-        return (
-          <div className="itemCard" onClick={() =>setShowDetail(item.id)} key={item.id}>
-            <Item data={item} />
-          </div>
-        );
+      {items.map((item) => {
+        return(
+          <div className="itemCard" key={item.id}>
+            <Link to={`/categoria/${micategoria}/${item.id}`}>
+              <Item data={item} />
+            </Link>
+          </div>)
       })}
     </div>
   );

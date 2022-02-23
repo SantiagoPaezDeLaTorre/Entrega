@@ -7,11 +7,14 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import React, {useContext} from "react";
+import { CartContext } from "../CartContext";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link, useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 const NavBar = ({setCategoryId}) => {
-  
+
+  const {cantidadTotal} = useContext(CartContext);
   const navigate = useNavigate();
   function handlerCategory(category) {
     if (category === "perros"){
@@ -20,9 +23,9 @@ const NavBar = ({setCategoryId}) => {
     else if (category === "gatos") {
       setCategoryId(2)
     }
-    navigate.push(`/${category}`);
-    
+    navigate.push(`/${category}`); 
   }
+  
   return (
     <div className="navbarContainer">
       <Navbar bg="light" expand="lg" className="navegacion">
@@ -39,10 +42,10 @@ const NavBar = ({setCategoryId}) => {
               <Nav.Link as={Link} to="/" className="nav-link" >
                 INICIO
               </Nav.Link>
-              <Nav.Link as={Link} to="/perros" className="nav-link" onClick={() => handlerCategory("perros")}>
+              <Nav.Link as={Link} to="/categoria/perros" className="nav-link" >
                 PERROS
               </Nav.Link>
-              <Nav.Link as={Link} to="/gatos" className="nav-link" onClick={() => handlerCategory("gatos")}>
+              <Nav.Link as={Link} to="/categoria/gatos" className="nav-link" >
                 GATOS
               </Nav.Link>
               <Nav.Link as={Link} to="/servicios" href="#servicios" className="nav-link">
@@ -64,7 +67,9 @@ const NavBar = ({setCategoryId}) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <CartWidget />
+      <Link to="/cart">
+        { (cantidadTotal !== 0) ? <CartWidget /> : <p></p>}
+      </Link>
     </div>
   );
 };

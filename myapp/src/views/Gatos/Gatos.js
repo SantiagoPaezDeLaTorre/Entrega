@@ -2,7 +2,7 @@ import React from 'react';
 import ItemDetailContainer from '../../containers/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from '../../containers/ItemListContainer/ItemListContainer';
 
-const Gatos = ({showDetail, setShowDetail}) => {
+const Gatos = ({showDetail, setShowDetail, onAddToCart}) => {
     console.log("showDetail");
     console.log(showDetail);
     
@@ -10,6 +10,7 @@ const Gatos = ({showDetail, setShowDetail}) => {
     <div className="contenedor">
         {showDetail !== "" ? 
             (<ItemDetailContainer
+            onAdd={onAddToCart}
             showDetail={showDetail}
             setShowDetail={setShowDetail}
             />)
